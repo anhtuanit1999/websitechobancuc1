@@ -13,4 +13,35 @@
             <p style="font-size: 18px; color: white; position: relative; left: -40px; top: 20px;"><i>"Thậm chí khi bạn không hoàn hảo, bạn vẫn là một phiên bản "có giới hạn" của riêng bản thân bạn."</i></p>
         </div>
     </div>
+    <button type="button" class="btn btn-info btn-lg" id="myBtn" style="display: none;">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Daisy Tea</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Chào mừng bạn đến với website cá nhân của sinh viên Phan Hoàng Trang Ý, DHKQ14ATT. Trường đại học Công Nghiệp TP.HCM</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let flag = true;
+        $(document).ready(function() {
+            if (flag) {
+                $("#myModal").modal();
+                flag = false;
+            }
+        });
+    </script>
     <%- include('footer'); -%>
